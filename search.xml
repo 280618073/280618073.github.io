@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>关于跨域问题</title>
+      <link href="/2018/08/05/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+      <url>/2018/08/05/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h1 id="关于跨域问题"><a href="#关于跨域问题" class="headerlink" title="关于跨域问题"></a>关于跨域问题</h1><h2 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h2><p>浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域。 </p><h2 id="怎么解决跨域问题"><a href="#怎么解决跨域问题" class="headerlink" title="怎么解决跨域问题"></a>怎么解决跨域问题</h2><h3 id="1-使用jsonp"><a href="#1-使用jsonp" class="headerlink" title="1.使用jsonp"></a>1.使用jsonp</h3><p>Jsonp(JSON with Padding) 是 json 的一种”使用模式”，可以让网页从别的域名（网站）那获取资料，即跨域读取数据。<br>以下是jquery使用jsonp的代码：</p><pre><code>$.getJSON(    url,                 //请求URL    [data],           //传参，可选参数4 ，    [callback]       //回调函数，可选参数,     function(data) {        for(var i = 0; i &lt; data.length; i++)        {            alert(data[i]);        }       });</code></pre><p>当然也可以用$.ajax的方式：</p><pre><code>$.ajax({    url: &quot;&quot;,    type: &quot;GET&quot;,    //这里只有get 类型可用，即使设置了 post类型，还是使用的get     dataType: &quot;jsonp&quot;, //指定服务器返回的数据类型    success: function (data) {        var result = JSON.stringify(data); //json对象转成字符串    }});</code></pre><p>注意，这里返回的data格式不是<strong>json</strong>格式，而应该是<strong>jsonp</strong>格式如”callback({“id”: 1, “name” : 小明, “age”: 21})”，在json格式外面多了一层括号，ajax返回数据类型必须和请求参数格式一致，不然会导致返回跳到error，所以使用这种方式后端要多加数据格式处理。</p><h3 id="2-使用Access-Control-Allow-Origin"><a href="#2-使用Access-Control-Allow-Origin" class="headerlink" title="2.使用Access-Control-Allow-Origin"></a>2.使用Access-Control-Allow-Origin</h3><p>Access-Control-Allow-Origin是HTML5中定义的一种解决资源跨域的策略。</p><p>他是通过服务器端返回带有Access-Control-Allow-Origin标识的Response header，用来解决资源的跨域权限问题。</p><p>在服务端添加如下代码：</p><pre><code>//    指定允许其他域名访问，&apos;*&apos;代表允许所有域名访问response.setHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);//    指定允许的请求方式     response.setHeader(&quot;Access-Control-Allow-Methods&quot;, &quot;POST, GET, OPTIONS, DELETE&quot;);//    表明在3600秒内，不需要再发送预检验请求，可以缓存该结果response.setHeader(&quot;Access-Control-Max-Age&quot;, &quot;3600&quot;);//    响应头设置， X-Request-With为ajax请求的响应头  response.setHeader(&quot;Access-Control-Allow-Headers&quot;, &quot;Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control&quot;);//    表示是否允许发送Cookie,默认情况下，Cookie不包括在CORS请求之中,设为true，即表示服务器明确许可  response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);//    IE8引入XDomainRequestresponse.setHeader(&quot;XDomainRequestAllowed&quot;,&quot;1&quot;);</code></pre><p>前端正常的ajax调用：</p><pre><code>$.ajax({    url:&quot;&quot;,    success:function(data){    }});</code></pre><p>个人推荐第二种方法，后台无需做数据格式处理，正常返回json格式即可。</p><p>参考链接：<br><a href="http://www.runoob.com/json/json-jsonp.html" title="JSONP 教程" target="_blank" rel="noopener">http://www.runoob.com/json/json-jsonp.html</a><br><a href="https://blog.csdn.net/abs1004/article/details/76895652" title="thinkphp ajax 跨域请求 Access-Control-Allow-Origin 完美解决" target="_blank" rel="noopener">https://blog.csdn.net/abs1004/article/details/76895652</a>  </p>]]></content>
+      
+      <categories>
+          
+          <category> ajax </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ajax </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2018/07/22/hello-world/"/>
       <url>/2018/07/22/hello-world/</url>
