@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>springMvc+mybatis批量查询</title>
+      <link href="/2018/08/16/springMvc-mybatis%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2/"/>
+      <url>/2018/08/16/springMvc-mybatis%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2/</url>
+      <content type="html"><![CDATA[<h1 id="springMvc-mybatis批量查询"><a href="#springMvc-mybatis批量查询" class="headerlink" title="springMvc+mybatis批量查询"></a>springMvc+mybatis批量查询</h1><p>项目环境基于springMvc+mybatis,数据库使用的是MySql。</p><h2 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h2><p>页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。<br><img src="https://i.imgur.com/GQPxDIj.jpg" alt=""><br>HTML主要代码段：</p><pre><code>&lt;form id=&quot;search_form&quot; action=&quot;&quot; method=&quot;get&quot;&gt;    &lt;input type=&quot;text&quot; name=&quot;Number&quot; class=&quot;Number&quot;&gt;&lt;/form&gt;</code></pre><p>如果不使用ajax方式提交，则直接使用按钮提交即可。<br>使用ajax提交可以使用jQuery ajax - <strong>serialize()</strong> 方法使提交操作更简洁。</p><p>serialize() 方法通过序列化表单值，创建 URL 编码文本字符串。<br>您可以选择一个或多个表单元素（比如 input 及/或 文本框），或者 form 元素本身。<br>序列化的值可在生成 AJAX 请求时用于 URL 查询字符串中。</p><p>语法</p><pre><code>$(selector).serialize()</code></pre><p>下面是使用ajax方式提交主要代码段：</p><pre><code>$.ajax({        url:&apos;&apos;, //请求的地址        data:$(&apos;#search_form&apos;).serialize(),        beforeSend: function(){            //ajax提交前执行的函数            },        success:function(result){//ajax提交成功返回数据后执行的函数            $.each(result.orderList,function(i, v) {                //遍历返回的json数据            })        }        })</code></pre><h2 id="后端处理"><a href="#后端处理" class="headerlink" title="后端处理"></a>后端处理</h2><p>Controller层对应请求方法的主要代码：</p><pre><code>String[] numbers = request.getParameterValues(&quot;Number&quot;);// 接收数组变量（名字相同，但值有多个的数据）Map&lt;String, String[]&gt; map = new HashMap&lt;String, String[]&gt;();map.put(&quot;numbers&quot;, numbers);//传入Mybatis参数为Map类型List&lt;Order&gt; orderlist = orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为查询结果</code></pre><p>dao层，service层代码省略。</p><p>model层OrderMapping.xml主要代码段：</p><pre><code>&lt;select id=&quot;queryOrderListByNumbers&quot; resultMap=&quot;OrderMap&quot; parameterType=&quot;java.util.Map&quot;&gt;    SELECT * FROM T_ORDER     WHRER ORDER_NUMBER IN    &lt;foreach collection=&quot;numbers&quot; item=&quot;item&quot; index=&quot;index&quot;        open=&quot;(&quot; close=&quot;)&quot; separator=&quot;,&quot;&gt;        #{item}    &lt;/foreach&gt;//mybatis遍历map参数&lt;/select&gt;</code></pre><p>参考资料：<a href="http://www.w3school.com.cn/jquery/ajax_serialize.asp" title="jQuery ajax - serialize() 方法" target="_blank" rel="noopener">http://www.w3school.com.cn/jquery/ajax_serialize.asp</a></p>]]></content>
+      
+      <categories>
+          
+          <category> java随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ajax </tag>
+            
+            <tag> springMvc </tag>
+            
+            <tag> Mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>关于跨域问题</title>
       <link href="/2018/08/05/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
       <url>/2018/08/05/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
@@ -10,7 +35,7 @@
       
       <categories>
           
-          <category> 随笔 </category>
+          <category> java随笔 </category>
           
       </categories>
       
