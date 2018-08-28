@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码： &amp;lt;form id=&amp;quot;search_form&amp;quot; action=&amp;quot;&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;l">
+<meta name="description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码：123&amp;lt;form id=&quot;search_form&quot; action=&quot;&quot; method=&quot;get&quot;&amp;gt;	&amp;lt;input type=&quot;text&quot; name=&quot;Number">
 <meta name="keywords" content="ajax,springMvc,Mybatis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springMvc+mybatis批量查询">
 <meta property="og:url" content="http://yoursite.com/2018/08/16/springMvc-mybatis批量查询/index.html">
 <meta property="og:site_name" content="Cfm&#39;s blog">
-<meta property="og:description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码： &amp;lt;form id=&amp;quot;search_form&amp;quot; action=&amp;quot;&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;l">
+<meta property="og:description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码：123&amp;lt;form id=&quot;search_form&quot; action=&quot;&quot; method=&quot;get&quot;&amp;gt;	&amp;lt;input type=&quot;text&quot; name=&quot;Number">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/GQPxDIj.jpg">
-<meta property="og:updated_time" content="2018-08-15T17:41:05.486Z">
+<meta property="og:updated_time" content="2018-08-28T15:31:25.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springMvc+mybatis批量查询">
-<meta name="twitter:description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码： &amp;lt;form id=&amp;quot;search_form&amp;quot; action=&amp;quot;&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt;     &amp;l">
+<meta name="twitter:description" content="springMvc+mybatis批量查询项目环境基于springMvc+mybatis,数据库使用的是MySql。 前端页面页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。HTML主要代码：123&amp;lt;form id=&quot;search_form&quot; action=&quot;&quot; method=&quot;get&quot;&amp;gt;	&amp;lt;input type=&quot;text&quot; name=&quot;Number">
 <meta name="twitter:image" content="https://i.imgur.com/GQPxDIj.jpg">
 
 
@@ -386,44 +386,16 @@
 
       
         <h1 id="springMvc-mybatis批量查询"><a href="#springMvc-mybatis批量查询" class="headerlink" title="springMvc+mybatis批量查询"></a>springMvc+mybatis批量查询</h1><p>项目环境基于springMvc+mybatis,数据库使用的是MySql。</p>
-<h2 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h2><p>页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。<br><img src="https://i.imgur.com/GQPxDIj.jpg" alt=""><br>HTML主要代码：</p>
-<pre><code>&lt;form id=&quot;search_form&quot; action=&quot;&quot; method=&quot;get&quot;&gt;
-    &lt;input type=&quot;text&quot; name=&quot;Number&quot; class=&quot;Number&quot;&gt;
-&lt;/form&gt;
-</code></pre><p>如果不使用ajax方式提交，则直接使用按钮提交即可。<br>使用ajax提交可以使用jQuery ajax - <strong>serialize()</strong> 方法使提交操作更简洁。</p>
+<h2 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h2><p>页面效果如下，点击新增则增加一个相同的输入框，提交后显示多条订单的查询结果。<br><img src="https://i.imgur.com/GQPxDIj.jpg" alt=""><br>HTML主要代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">"search_form"</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"Number"</span> <span class="attr">class</span>=<span class="string">"Number"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果不使用ajax方式提交，则直接使用按钮提交即可。<br>使用ajax提交可以使用jQuery ajax - <strong>serialize()</strong> 方法使提交操作更简洁。</p>
 <p>serialize() 方法通过序列化表单值，创建 URL 编码文本字符串。<br>您可以选择一个或多个表单元素（比如 input 及/或 文本框），或者 form 元素本身。<br>序列化的值可在生成 AJAX 请求时用于 URL 查询字符串中。</p>
 <p>语法</p>
 <pre><code>$(selector).serialize()
-</code></pre><p>下面是使用ajax方式提交主要代码：</p>
-<pre><code>$.ajax({
-        url:&apos;&apos;, //请求的地址
-        data:$(&apos;#search_form&apos;).serialize(),
-        beforeSend: function(){
-            //ajax提交前执行的函数
-            },
-        success:function(result){//ajax提交成功返回数据后执行的函数
-            $.each(result.orderList,function(i, v) {
-                //遍历返回的json数据
-            })
-        }
-        })
-</code></pre><h2 id="后端处理"><a href="#后端处理" class="headerlink" title="后端处理"></a>后端处理</h2><p>Controller层对应请求方法主要代码：</p>
-<pre><code>String[] numbers = request.getParameterValues(&quot;Number&quot;);// 接收数组变量（名字相同，但值有多个的数据）
-Map&lt;String, String[]&gt; map = new HashMap&lt;String, String[]&gt;();
-map.put(&quot;numbers&quot;, numbers);//传入Mybatis参数为Map类型
-List&lt;Order&gt; orderlist = 
-orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为查询结果
-</code></pre><p>dao层，service层代码省略。</p>
-<p>model层OrderMapping.xml主要代码：</p>
-<pre><code>&lt;select id=&quot;queryOrderListByNumbers&quot; resultMap=&quot;OrderMap&quot; parameterType=&quot;java.util.Map&quot;&gt;
-    SELECT * FROM T_ORDER 
-    WHRER ORDER_NUMBER IN
-    &lt;foreach collection=&quot;numbers&quot; item=&quot;item&quot; index=&quot;index&quot;
-        open=&quot;(&quot; close=&quot;)&quot; separator=&quot;,&quot;&gt;
-        #{item}
-    &lt;/foreach&gt;//mybatis遍历map参数
-&lt;/select&gt;
-</code></pre><p>参考资料：<a href="http://www.w3school.com.cn/jquery/ajax_serialize.asp" title="jQuery ajax - serialize() 方法" target="_blank" rel="noopener">http://www.w3school.com.cn/jquery/ajax_serialize.asp</a></p>
+</code></pre><p>下面是使用ajax方式提交主要代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	url:<span class="string">''</span>, <span class="comment">//请求的地址</span></span><br><span class="line">	data:$(<span class="string">'#search_form'</span>).serialize(),</span><br><span class="line">        beforeSend: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//ajax提交前执行的函数</span></span><br><span class="line">		&#125;,</span><br><span class="line">	success:<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;<span class="comment">//ajax提交成功返回数据后执行的函数</span></span><br><span class="line">            	$.each(result.orderList,<span class="function"><span class="keyword">function</span>(<span class="params">i, v</span>) </span>&#123;</span><br><span class="line">				<span class="comment">//遍历返回的json数据</span></span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="后端处理"><a href="#后端处理" class="headerlink" title="后端处理"></a>后端处理</h2><p>Controller层对应请求方法主要代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String[] numbers = request.getParameterValues(<span class="string">"Number"</span>);<span class="comment">// 接收数组变量（名字相同，但值有多个的数据）</span></span><br><span class="line">Map&lt;String, String[]&gt; map = <span class="keyword">new</span> HashMap&lt;String, String[]&gt;();</span><br><span class="line">map.put(<span class="string">"numbers"</span>, numbers);<span class="comment">//传入Mybatis参数为Map类型</span></span><br><span class="line">List&lt;Order&gt; orderlist = </span><br><span class="line">orderService.queryOrderListByNumbers(map);<span class="comment">//执行数据库操作，orderlist为查询结果</span></span><br></pre></td></tr></table></figure></p>
+<p>dao层，service层代码省略。</p>
+<p>model层OrderMapping.xml主要代码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"queryOrderListByNumbers"</span> <span class="attr">resultMap</span>=<span class="string">"OrderMap"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.Map"</span>&gt;</span></span><br><span class="line">	SELECT * FROM T_ORDER </span><br><span class="line">	WHRER ORDER_NUMBER IN</span><br><span class="line">	<span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"numbers"</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">close</span>=<span class="string">")"</span> <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">           #&#123;item&#125;</span><br><span class="line">       <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span>//mybatis遍历map参数</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>参考资料：<a href="http://www.w3school.com.cn/jquery/ajax_serialize.asp" title="jQuery ajax - serialize() 方法" target="_blank" rel="noopener">http://www.w3school.com.cn/jquery/ajax_serialize.asp</a></p>
 
       
     </div>
@@ -467,6 +439,10 @@ orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/28/SpringBoot-学习历程-：-HelloWorld/" rel="prev" title="SpringBoot 学习历程 ： HelloWorld">
+                SpringBoot 学习历程 ： HelloWorld <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -545,7 +521,7 @@ orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -556,7 +532,7 @@ orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -567,7 +543,7 @@ orderService.queryOrderListByNumbers(map);//执行数据库操作，orderlist为
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
