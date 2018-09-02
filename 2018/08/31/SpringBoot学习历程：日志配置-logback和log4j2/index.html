@@ -103,7 +103,7 @@
 <meta property="og:description" content="默认配置文件配置12345# 日志文件名，比如：test.log，或者是 /var/log/test.loglogging.file=test.log # 日志级别配置，比如： logging.level.org.springframework=DEBUGlogging.level.*=infologging.level.org.springframework=DEBUG 不建议使用：不够灵活，对">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/pic_home/springboot1/1535859992760.png">
-<meta property="og:updated_time" content="2018-09-02T04:43:51.899Z">
+<meta property="og:updated_time" content="2018-09-02T04:46:36.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot学习历程：日志配置-logback和log4j2">
 <meta name="twitter:description" content="默认配置文件配置12345# 日志文件名，比如：test.log，或者是 /var/log/test.loglogging.file=test.log # 日志级别配置，比如： logging.level.org.springframework=DEBUGlogging.level.*=infologging.level.org.springframework=DEBUG 不建议使用：不够灵活，对">
@@ -395,7 +395,7 @@
 <li>scanPeriod：设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟。</li>
 <li>debug：当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。</li>
 </ul>
-<h3 id="根节点的属性和子节点"><a href="#根节点的属性和子节点" class="headerlink" title="根节点的属性和子节点"></a>根节点<configuration>的属性和子节点</configuration></h3><ul>
+<h4 id="根节点的属性和子节点"><a href="#根节点的属性和子节点" class="headerlink" title="根节点的属性和子节点"></a>根节点<configuration>的属性和子节点</configuration></h4><ul>
 <li>属性一：设置上下文名称&lt;contextName&gt;每个logger都关联到logger上下文，默认上下文名称为“default”。</li>
 <li>属性二：设置变量&lt;property&gt; 用来定义变量值的标签， 有两个属性，name和value；其中name的值是变量的名称，value的值时变量定义的值。</li>
 <li><p>子节点一：&lt;appender&gt;用来格式化日志输出节点，有俩个属性name和class，class用来指定哪种输出策略，常用就是控制台输出策略和文件输出策略。</p>
@@ -591,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认配置文件配置"><span class="nav-number">1.</span> <span class="nav-text">默认配置文件配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用外部配置文件"><span class="nav-number">2.</span> <span class="nav-text">引用外部配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#logback配置方式"><span class="nav-number">2.1.</span> <span class="nav-text">logback配置方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#根节点包含的属性"><span class="nav-number">2.1.1.</span> <span class="nav-text">根节点包含的属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根节点的属性和子节点"><span class="nav-number">2.2.</span> <span class="nav-text">根节点的属性和子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#log4j2配置方式"><span class="nav-number">2.3.</span> <span class="nav-text">log4j2配置方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#去除logback的依赖包，添加log4j2的依赖包"><span class="nav-number">2.3.1.</span> <span class="nav-text">去除logback的依赖包，添加log4j2的依赖包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序引入"><span class="nav-number">3.</span> <span class="nav-text">程序引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较"><span class="nav-number">4.</span> <span class="nav-text">比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认配置文件配置"><span class="nav-number">1.</span> <span class="nav-text">默认配置文件配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用外部配置文件"><span class="nav-number">2.</span> <span class="nav-text">引用外部配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#logback配置方式"><span class="nav-number">2.1.</span> <span class="nav-text">logback配置方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#根节点包含的属性"><span class="nav-number">2.1.1.</span> <span class="nav-text">根节点包含的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根节点的属性和子节点"><span class="nav-number">2.1.2.</span> <span class="nav-text">根节点的属性和子节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#log4j2配置方式"><span class="nav-number">2.2.</span> <span class="nav-text">log4j2配置方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#去除logback的依赖包，添加log4j2的依赖包"><span class="nav-number">2.2.1.</span> <span class="nav-text">去除logback的依赖包，添加log4j2的依赖包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序引入"><span class="nav-number">3.</span> <span class="nav-text">程序引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较"><span class="nav-number">4.</span> <span class="nav-text">比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
