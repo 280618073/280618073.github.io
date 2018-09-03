@@ -19,6 +19,8 @@
             
             <tag> springBoot </tag>
             
+            <tag> mybatis </tag>
+            
         </tags>
       
     </entry>
@@ -101,9 +103,9 @@
       
         <tags>
             
-            <tag> oracle </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> oracle </tag>
             
         </tags>
       
@@ -124,9 +126,9 @@
       
         <tags>
             
-            <tag> oracle </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> oracle </tag>
             
         </tags>
       
@@ -189,11 +191,11 @@
       
         <tags>
             
+            <tag> mybatis </tag>
+            
             <tag> ajax </tag>
             
             <tag> springMvc </tag>
-            
-            <tag> mybatis </tag>
             
         </tags>
       
