@@ -112,9 +112,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> oracle </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
@@ -135,9 +135,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> oracle </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
@@ -200,9 +200,9 @@
       
         <tags>
             
-            <tag> mybatis </tag>
-            
             <tag> ajax </tag>
+            
+            <tag> mybatis </tag>
             
             <tag> springMvc </tag>
             
