@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="springBoot," />
+  <meta name="keywords" content="restful,springBoot,rest," />
 
 
 
@@ -94,18 +94,21 @@
 
 
 
-<meta name="description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
-<meta name="keywords" content="springBoot">
+<meta name="description" content="添加依赖1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;httpclient&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; RestTemplateSpring的RestTemplate封装了JDK自带的HttpURLCo">
+<meta name="keywords" content="restful,springBoot,rest">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot学习历程：异常处理">
-<meta property="og:url" content="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/index.html">
+<meta property="og:title" content="SpringBoot学习历程：调用Rest服务(RestTemplate) ">
+<meta property="og:url" content="http://daminga.cn/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/index.html">
 <meta property="og:site_name" content="Cfm&#39;s blog">
-<meta property="og:description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
+<meta property="og:description" content="添加依赖1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;httpclient&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; RestTemplateSpring的RestTemplate封装了JDK自带的HttpURLCo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T07:45:54.486Z">
+<meta property="og:image" content="http://daminga.cn/pic_home/springboot2/1536771545263.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/springboot2/1536771663920.png">
+<meta property="og:updated_time" content="2018-09-12T17:09:25.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot学习历程：异常处理">
-<meta name="twitter:description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
+<meta name="twitter:title" content="SpringBoot学习历程：调用Rest服务(RestTemplate) ">
+<meta name="twitter:description" content="添加依赖1234&amp;lt;dependency&amp;gt;	&amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;	&amp;lt;artifactId&amp;gt;httpclient&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; RestTemplateSpring的RestTemplate封装了JDK自带的HttpURLCo">
+<meta name="twitter:image" content="http://daminga.cn/pic_home/springboot2/1536771545263.png">
 
 
 
@@ -134,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/"/>
+  <link rel="canonical" href="http://daminga.cn/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/"/>
 
 
 
 
 
-  <title>SpringBoot学习历程：异常处理 | Cfm's blog</title>
+  <title>SpringBoot学习历程：调用Rest服务(RestTemplate)  | Cfm's blog</title>
   
 
 
@@ -283,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/">
+    <link itemprop="mainEntityOfPage" href="http://daminga.cn/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cfm">
@@ -300,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot学习历程：异常处理</h1>
+          <h1 class="post-title" itemprop="name headline">SpringBoot学习历程：调用Rest服务(RestTemplate) </h1>
         
 
         <div class="post-meta">
@@ -312,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T15:03:36+08:00">
-                2018-09-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T01:06:25+08:00">
+                2018-09-13
               </time>
             
 
@@ -354,8 +357,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/09/03/SpringBoot学习历程：异常处理/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/09/03/SpringBoot学习历程：异常处理/" itemprop="commentsCount"></span>
+                <a href="/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -383,14 +386,16 @@
       
 
       
-        <h2 id="方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController"><a href="#方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController" class="headerlink" title="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController"></a>方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"error"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseErrorController</span> <span class="keyword">implements</span> <span class="title">ErrorController</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(BaseErrorController.class);</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getErrorPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"出错啦！进入自定义错误控制器"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"error/error"</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">error</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> getErrorPath();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="方法二：添加自定义的错误页面"><a href="#方法二：添加自定义的错误页面" class="headerlink" title="方法二：添加自定义的错误页面"></a>方法二：添加自定义的错误页面</h2><ul>
-<li><p>html静态页面：在resources/public/error/ 下定义<br>如添加404页面： resources/public/error/404.html页面，中文注意页面编码</p>
-</li>
-<li><p>模板引擎页面：在templates/error/下定义<br>如添加5xx页面： templates/error/5xx.ftl<br>注：templates/error/ 这个的优先级比较 resources/public/error/高</p>
-</li>
+        <h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>httpclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="RestTemplate"><a href="#RestTemplate" class="headerlink" title="RestTemplate"></a>RestTemplate</h2><p>Spring的RestTemplate封装了JDK自带的HttpURLConnection、Apache HttpClient、Netty 4、OkHTTP 2/3这些库的实现，使用起来更简洁。 </p>
+<h2 id="编写restController"><a href="#编写restController" class="headerlink" title="编写restController"></a>编写restController</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.cfm.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.cfm.model.Boy;</span><br><span class="line"><span class="keyword">import</span> com.cfm.service.BoyService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/rest"</span>, method = RequestMethod.POST)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RestCfmController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BoyService boyService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span>(<span class="string">"/update"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(@RequestBody Boy boy)</span></span>&#123;</span><br><span class="line">        boyService.update(boy);</span><br><span class="line">        <span class="keyword">return</span> boyService.getById(boy.getId());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/get/&#123;id&#125;"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boy <span class="title">get</span><span class="params">(@PathVariable(value = <span class="string">"id"</span>)</span> Integer id) </span>&#123;</span><br><span class="line">        Boy boy = boyService.getById(id);</span><br><span class="line">        <span class="keyword">return</span> boy;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="编写测试类"><a href="#编写测试类" class="headerlink" title="编写测试类"></a>编写测试类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.cfm.mybatis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.cfm.model.Boy;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.web.client.RestTemplateBuilder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.context.junit4.SpringRunner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RestApplicationTests</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RestTemplateBuilder restTemplateBuilder;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getForObject</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Boy boy =restTemplateBuilder.build().</span><br><span class="line">                    getForObject(<span class="string">"http://localhost:8080/rest/update"</span>, Boy.class, <span class="number">2</span>);</span><br><span class="line">        System.out.println(boy);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postForObject</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Map&lt;String,Object&gt; map = <span class="keyword">new</span> HashMap&lt;String,Object&gt;();</span><br><span class="line">        Boy boy = <span class="keyword">new</span> Boy();</span><br><span class="line">        boy.setId(<span class="number">2</span>);</span><br><span class="line">        boy.setName(<span class="string">"嘻嘻嘻"</span>);</span><br><span class="line">        map.put(<span class="string">"boy"</span>, boy);</span><br><span class="line">        boy = restTemplateBuilder.build().</span><br><span class="line">                postForObject(<span class="string">"http://localhost:8080/rest/update"</span>,boy, Boy.class);</span><br><span class="line">        System.out.println(boy);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>执行getForObject()，RestApplicationTests控制台输出<br><img src="/pic_home/springboot2/1536771545263.png" alt="avatar"></li>
+<li>执行postForObject()，RestApplicationTests控制台输出<br><img src="/pic_home/springboot2/1536771663920.png" alt="avatar"></li>
 </ul>
-<h2 id="方法三：使用注解-ControllerAdvice"><a href="#方法三：使用注解-ControllerAdvice" class="headerlink" title="方法三：使用注解@ControllerAdvice"></a>方法三：使用注解@ControllerAdvice</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.cfm.handler;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.HttpStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.ModelAndView;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 异常处理类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorExceptionHandler</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 统一异常处理</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> exception</span></span><br><span class="line"><span class="comment">	 *            exception</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ExceptionHandler</span>(&#123; RuntimeException.class &#125;)</span><br><span class="line">	<span class="meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ModelAndView <span class="title">processException</span><span class="params">(RuntimeException exception)</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"自定义异常处理-RuntimeException"</span>);</span><br><span class="line">		ModelAndView m = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">		m.addObject(<span class="string">"Exception"</span>, exception.getMessage());</span><br><span class="line">		m.setViewName(<span class="string">"error/500"</span>);</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 统一异常处理</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> exception</span></span><br><span class="line"><span class="comment">	 *            exception</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ExceptionHandler</span>(&#123; Exception.class &#125;)</span><br><span class="line">	<span class="meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ModelAndView <span class="title">processException</span><span class="params">(Exception exception)</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"自定义异常处理-Exception"</span>);</span><br><span class="line">		ModelAndView m = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">		m.addObject(<span class="string">"Exception"</span>, exception.getMessage());</span><br><span class="line">		m.setViewName(<span class="string">"error/500"</span>);</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://rensanning.iteye.com/blog/2362105" title="Spring Boot 入门 - 进阶篇（4）- REST访问(RestTemplate)" target="_blank" rel="noopener">http://rensanning.iteye.com/blog/2362105</a></p>
+
       
     </div>
     
@@ -406,12 +411,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/09/03/SpringBoot学习历程：异常处理/">SpringBoot学习历程：异常处理</a></p>
+  <p><span>本文标题:</span><a href="/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/">SpringBoot学习历程：调用Rest服务(RestTemplate) </a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Cfm 的个人博客">Cfm</a></p>
-  <p><span>发布时间:</span>2018年09月03日 - 15:09</p>
-  <p><span>最后更新:</span>2018年09月03日 - 15:09</p>
-  <p><span>原始链接:</span><a href="/2018/09/03/SpringBoot学习历程：异常处理/" title="SpringBoot学习历程：异常处理">http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年09月13日 - 01:09</p>
+  <p><span>最后更新:</span>2018年09月13日 - 01:09</p>
+  <p><span>原始链接:</span><a href="/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/" title="SpringBoot学习历程：调用Rest服务(RestTemplate) ">http://daminga.cn/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/09/13/SpringBoot学习历程：调用Rest服务-RestTemplate/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -441,7 +446,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/restful/" rel="tag"># restful</a>
+          
             <a href="/tags/springBoot/" rel="tag"># springBoot</a>
+          
+            <a href="/tags/rest/" rel="tag"># rest</a>
           
         </div>
       
@@ -454,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/31/SpringBoot学习历程：日志配置-logback和log4j2/" rel="next" title="SpringBoot学习历程：日志配置-logback和log4j2">
-                <i class="fa fa-chevron-left"></i> SpringBoot学习历程：日志配置-logback和log4j2
+              <a href="/2018/09/12/SpringBoot学习历程：ActiveMQ整合/" rel="next" title="SpringBoot学习历程：ActiveMQ整合">
+                <i class="fa fa-chevron-left"></i> SpringBoot学习历程：ActiveMQ整合
               </a>
             
           </div>
@@ -463,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/03/SpringBoot学习历程：Servlets-Filters-listeners注解/" rel="prev" title="SpringBoot学习历程：Servlets, Filters, listeners注解">
-                SpringBoot学习历程：Servlets, Filters, listeners注解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController"><span class="nav-number">1.</span> <span class="nav-text">方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：添加自定义的错误页面"><span class="nav-number">2.</span> <span class="nav-text">方法二：添加自定义的错误页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三：使用注解-ControllerAdvice"><span class="nav-number">3.</span> <span class="nav-text">方法三：使用注解@ControllerAdvice</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加依赖"><span class="nav-number">1.</span> <span class="nav-text">添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RestTemplate"><span class="nav-number">2.</span> <span class="nav-text">RestTemplate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写restController"><span class="nav-number">3.</span> <span class="nav-text">编写restController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写测试类"><span class="nav-number">4.</span> <span class="nav-text">编写测试类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
