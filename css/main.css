@@ -1859,7 +1859,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #25ffff;
+  background: #b0ff22;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3034,13 +3034,4 @@ pre .javascript .function {
 }
 .footer {
   bottom: auto;
-}
-body {
-  background: url("/images/bg.jpg") no-repeat center center fixed;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%;
 }
