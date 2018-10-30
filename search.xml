@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>select2的使用</title>
+      <link href="/2018/09/20/select2%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/2018/09/20/select2%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>查询控件展开后可通过关键字进行检索（模糊搜索）</p><h2 id="参数简介"><a href="#参数简介" class="headerlink" title="参数简介"></a>参数简介</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[多选]则需要加上属性：multiple="multiple" --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"select2"</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"1"</span> <span class="attr">data-plantform</span>=<span class="string">"android"</span>&gt;</span>苹果<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"2"</span> <span class="attr">data-plantform</span>=<span class="string">"ios"</span>&gt;</span>安卓<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#select2"</span>).select2(); <span class="comment">//启用select2</span></span><br><span class="line">$(<span class="string">"#select2"</span>).select2(<span class="string">"destroy"</span>); <span class="comment">//移除select2</span></span><br><span class="line">$(<span class="string">"#select2"</span>).empty(); <span class="comment">//清空下拉框列表值</span></span><br><span class="line">$(<span class="string">"#select2-id"</span>).select2(&#123;</span><br><span class="line">     templateResult : formatState, <span class="comment">// 列表带图片</span></span><br><span class="line">     templateSelection : formatState, <span class="comment">// 选中的带图片</span></span><br><span class="line"></span><br><span class="line">     language: <span class="string">"zh-CN"</span>, <span class="comment">//设置 提示语言</span></span><br><span class="line">     width: <span class="string">"100%"</span>, <span class="comment">//设置下拉框的宽度</span></span><br><span class="line">     placeholder: <span class="string">"请选择"</span>, <span class="comment">// 空值提示内容，选项值为 null</span></span><br><span class="line">     <span class="comment">//placeholder: &#123;id: '', text: "请选择"&#125;, // 同上，这里默认空值为 ''</span></span><br><span class="line">     minimumInputLength: <span class="number">10</span>  <span class="comment">//最小需要输入多少个字符才进行查询</span></span><br><span class="line">     allowClear: <span class="literal">true</span>, <span class="comment">//是否允许清空选中</span></span><br><span class="line">     tags: <span class="literal">false</span>,  <span class="comment">//设置必须存在的选项 才能选中，设置不存在的值则为null,如果 placeholder: &#123;id: '', text: "请选择"&#125; 则为 ''</span></span><br><span class="line">     selectOnClose: <span class="literal">true</span>, <span class="comment">// 如果没有手动选中，下拉框消失后会自动选中被hover的选项 （不建议使用）</span></span><br><span class="line">     closeOnSelect: <span class="literal">false</span>, <span class="comment">// 选择后下拉框不会关闭（单选-不建议使用）</span></span><br><span class="line">     minimumResultsForSearch: <span class="literal">Infinity</span>, <span class="comment">// 隐藏搜索框</span></span><br><span class="line">     theme: <span class="string">"classic"</span>, <span class="comment">// 样式</span></span><br><span class="line"></span><br><span class="line">     maximumSelectionLength: <span class="number">3</span>,  <span class="comment">// 多选 - 设置最多可以选择多少项</span></span><br><span class="line">     tokenSeparators: [<span class="string">','</span>, <span class="string">' '</span>], <span class="comment">// 多选 - 输入逗号和空格会自动完成一个选项 前提是：tags: true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul><li>Select2参数文档说明：<a href="https://select2.github.io/options.html" target="_blank" rel="noopener">https://select2.github.io/options.html</a></li><li>Select2源码：<a href="https://github.com/select2/select2" target="_blank" rel="noopener">https://github.com/select2/select2</a></li></ul>]]></content>
+      
+      <categories>
+          
+          <category> 前端随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jquery </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>SpringBoot学习历程：调用Rest服务(RestTemplate) </title>
       <link href="/2018/09/13/SpringBoot%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B%EF%BC%9A%E8%B0%83%E7%94%A8Rest%E6%9C%8D%E5%8A%A1-RestTemplate/"/>
       <url>/2018/09/13/SpringBoot%E5%AD%A6%E4%B9%A0%E5%8E%86%E7%A8%8B%EF%BC%9A%E8%B0%83%E7%94%A8Rest%E6%9C%8D%E5%8A%A1-RestTemplate/</url>
@@ -19,9 +40,9 @@
             
             <tag> springBoot </tag>
             
-            <tag> rest </tag>
-            
             <tag> restful </tag>
+            
+            <tag> rest </tag>
             
         </tags>
       
@@ -166,9 +187,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> oracle </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
@@ -189,9 +210,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
             <tag> oracle </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
