@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux,虚拟机," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="一、准备工作资源下载VMware 12安装文件下载 链接：https://pan.baidu.com/s/1Iq06UR0GxHoz_efb5tCq7g 密码：rmmq VMware 12许可证下载 链接：https://pan.baidu.com/s/1rpN7ppKx7kw0OJ6h6NMVug 密码：rbbi RedHat 7.0镜像下载 链接：https://pan.baidu.com/s">
+<meta name="keywords" content="linux,虚拟机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows7下搭建Linux虚拟机">
+<meta property="og:url" content="http://daminga.cn/2018/09/27/windows7下搭建Linux虚拟机/index.html">
+<meta property="og:site_name" content="Cfm&#39;s blog">
+<meta property="og:description" content="一、准备工作资源下载VMware 12安装文件下载 链接：https://pan.baidu.com/s/1Iq06UR0GxHoz_efb5tCq7g 密码：rmmq VMware 12许可证下载 链接：https://pan.baidu.com/s/1rpN7ppKx7kw0OJ6h6NMVug 密码：rbbi RedHat 7.0镜像下载 链接：https://pan.baidu.com/s">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/dc2710e2a3c4638157bb7fd3dca00b4b.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/de750de51a7a3425afbdc16336dd2dbf.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/3d3a1502fd30200b7b38b4636a3918ad.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/15975a714db95a4fb9f3a1b4dbc4d49b.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/4aab6106d9632e85f9efb8c6af9dcba5.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/5bc709bd01b215621e65be5e31c5c528.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d75505d930c1a5846975a6d6e815b9c7.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/b0a3a31b958ff8a3e90b7ed900c08327.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/6f5077c8051897fb762f497d83382597.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/c6bcaf6ee9d39e19d7e3ccb753dd7782.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/616e6ccc00540fcfedaac5d3718b5bb4.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d6eab94b251a2854bc10e81dc6e7161f.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d0338866f03a41e5434ea7fd2fd5a803.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/b79eefbe731b49c89171b103baeb4247.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/04b8272ebeadb67bf8955285524237a5.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/95d53ea4c9623e1f1d7e0185fa446eee.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/14a1b0af868a96960b0025484454241a.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/cb49960bd6d62d1ad88eea4974ad9465.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/ea221e047226914c27ac1c34eca1ba69.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/0d5884351fb491222316099d7f8066fa.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/2c2dd21d992855ffb9ed0c9270976e42.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/fc03d4891aff400d8efea62c81b6ba89.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d1fa0646d63a9309e986df7390cce347.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/be73b278631f7c482d1c26106e7102d6.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/cc0d07425f3d7901bc94c1d5e69f4eb6.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/3830a2e17a3181c6002080a246a748de.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/18c7f3404b6bef0231aaebb42e190294.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/5ca8e7aea1ddbe66b5601e2154428b08.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d888d86bc4533860f64358f737179882.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/41199e414b6a00be0468734f0814d07e.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/fea02f847b478d5ef1e5ab7c3af4ebde.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/e6b8f837ec2b2ea96adcf97248011a03.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/249e349a86fff0f6c441c375bc78137b.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/d46c3e8a8448a4fa1a855629f48eaefe.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/df4f28dcc6de70a334d0ae5b0b17bdb4.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/b1c3d25227917132c3abe57ff5348b2d.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/0850f3140d59c2c78320ac9749caadde.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/5d7fc71689971b1e2681613beed4d445.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/333607828b20b916dca5dca30637281a.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/c7d5bbec91f611d3fc88dd5e5956917a.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/a704ef740f3cfb567d2c486b3f224805.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/3e1603966ca7fa72b5aa6da7a170eaae.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/e8ae281b516d5096e2f9cdb9c0f47c83.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/f4d55589f175b848bf27f528fbf6865b.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/e302a0b3d4f43ff86b50dd06c55f965e.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/08746d3d57bfd9942efdd0a96f169dd4.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/23476da02402d23889fd38580e48f06f.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/a4fa2b7decafbbbc987ee45aa5ceb983.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/2dfe0de3e6799fa2e512c1be1cc1bd70.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/cd1429601d346bdda5dd252fb93d83fd.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/1f31b93f2cd5f2d128b347cdc5c5a1e3.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/7b56891b5929ad7fb56cb00884c8ffb6.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/e50066353c7d932f51c4bb2bd834e315.png">
+<meta property="og:image" content="http://daminga.cn/pic_home/media/e573356cc7981944e72f964753137a33.png">
+<meta property="og:updated_time" content="2018-10-30T08:00:16.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows7下搭建Linux虚拟机">
+<meta name="twitter:description" content="一、准备工作资源下载VMware 12安装文件下载 链接：https://pan.baidu.com/s/1Iq06UR0GxHoz_efb5tCq7g 密码：rmmq VMware 12许可证下载 链接：https://pan.baidu.com/s/1rpN7ppKx7kw0OJ6h6NMVug 密码：rbbi RedHat 7.0镜像下载 链接：https://pan.baidu.com/s">
+<meta name="twitter:image" content="http://daminga.cn/pic_home/media/dc2710e2a3c4638157bb7fd3dca00b4b.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://daminga.cn/2018/09/27/windows7下搭建Linux虚拟机/"/>
+
+
+
+
+
+  <title>windows7下搭建Linux虚拟机 | Cfm's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Cfm's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">I yearn for life, less is more.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://daminga.cn/2018/09/27/windows7下搭建Linux虚拟机/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cfm">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tx.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cfm's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">windows7下搭建Linux虚拟机</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T23:56:03+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/09/27/windows7下搭建Linux虚拟机/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/09/27/windows7下搭建Linux虚拟机/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h3><p>VMware 12安装文件下载</p>
+<p>链接：<a href="https://pan.baidu.com/s/1Iq06UR0GxHoz_efb5tCq7g" target="_blank" rel="noopener">https://pan.baidu.com/s/1Iq06UR0GxHoz_efb5tCq7g</a> 密码：rmmq</p>
+<p>VMware 12许可证下载</p>
+<p>链接：<a href="https://pan.baidu.com/s/1rpN7ppKx7kw0OJ6h6NMVug" target="_blank" rel="noopener">https://pan.baidu.com/s/1rpN7ppKx7kw0OJ6h6NMVug</a> 密码：rbbi</p>
+<p>RedHat 7.0镜像下载</p>
+<p>链接：<a href="https://pan.baidu.com/s/1ftCDwBmRVOjPcYwRzzU7hg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ftCDwBmRVOjPcYwRzzU7hg</a> 密码：d5e3</p>
+<h2 id="二、VMware-12-安装过程"><a href="#二、VMware-12-安装过程" class="headerlink" title="二、VMware 12 安装过程"></a>二、VMware 12 安装过程</h2><h3 id="1-下载好虚拟机，然后运行，点击下一步"><a href="#1-下载好虚拟机，然后运行，点击下一步" class="headerlink" title="1. 下载好虚拟机，然后运行，点击下一步"></a>1. 下载好虚拟机，然后运行，点击下一步</h3><p><img src="/pic_home/media/dc2710e2a3c4638157bb7fd3dca00b4b.png" alt="avatar"></p>
+<h3 id="2-选择我接受，下一步"><a href="#2-选择我接受，下一步" class="headerlink" title="2. 选择我接受，下一步"></a>2. 选择我接受，下一步</h3><p><img src="/pic_home/media/de750de51a7a3425afbdc16336dd2dbf.png" alt=""></p>
+<h3 id="3-选择安装的位置"><a href="#3-选择安装的位置" class="headerlink" title="3. 选择安装的位置"></a>3. 选择安装的位置</h3><p><img src="/pic_home/media/3d3a1502fd30200b7b38b4636a3918ad.png" alt=""></p>
+<h3 id="4-这一步，两个勾都不选也不会影响虚拟机的使用。"><a href="#4-这一步，两个勾都不选也不会影响虚拟机的使用。" class="headerlink" title="4. 这一步，两个勾都不选也不会影响虚拟机的使用。"></a>4. 这一步，两个勾都不选也不会影响虚拟机的使用。</h3><p><img src="/pic_home/media/15975a714db95a4fb9f3a1b4dbc4d49b.png" alt=""></p>
+<h3 id="5-这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式"><a href="#5-这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式" class="headerlink" title="5. 这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式"></a>5. 这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式</h3><p><img src="/pic_home/media/4aab6106d9632e85f9efb8c6af9dcba5.png" alt=""></p>
+<h3 id="6-这一步，确认好了，就点击安装"><a href="#6-这一步，确认好了，就点击安装" class="headerlink" title="6. 这一步，确认好了，就点击安装"></a>6. 这一步，确认好了，就点击安装</h3><p><img src="/pic_home/media/5bc709bd01b215621e65be5e31c5c528.png" alt=""></p>
+<h3 id="7-接下来就是等待的过程了"><a href="#7-接下来就是等待的过程了" class="headerlink" title="7. 接下来就是等待的过程了"></a>7. 接下来就是等待的过程了</h3><p><img src="/pic_home/media/d75505d930c1a5846975a6d6e815b9c7.png" alt=""></p>
+<h3 id="8-这一步完成"><a href="#8-这一步完成" class="headerlink" title="8.这一步完成"></a>8.这一步完成</h3><p><img src="/pic_home/media/b0a3a31b958ff8a3e90b7ed900c08327.png" alt=""></p>
+<h3 id="9-双击运行"><a href="#9-双击运行" class="headerlink" title="9. 双击运行"></a>9. 双击运行</h3><p><img src="/pic_home/media/6f5077c8051897fb762f497d83382597.png" alt=""></p>
+<h3 id="10-接着，输入密钥（密钥在百度找）"><a href="#10-接着，输入密钥（密钥在百度找）" class="headerlink" title="10. 接着，输入密钥（密钥在百度找）"></a>10. 接着，输入密钥（密钥在百度找）</h3><p><img src="/pic_home/media/c6bcaf6ee9d39e19d7e3ccb753dd7782.png" alt=""></p>
+<h3 id="11-接着就完成了，已经永久激活了"><a href="#11-接着就完成了，已经永久激活了" class="headerlink" title="11. 接着就完成了，已经永久激活了"></a>11. 接着就完成了，已经永久激活了</h3><p><img src="/pic_home/media/616e6ccc00540fcfedaac5d3718b5bb4.png" alt=""></p>
+<h2 id="三、VMware-12安装Redhat-7-0"><a href="#三、VMware-12安装Redhat-7-0" class="headerlink" title="三、VMware 12安装Redhat 7.0"></a>三、VMware 12安装Redhat 7.0</h2><h3 id="1-选择新建一个虚拟机，选择自定义："><a href="#1-选择新建一个虚拟机，选择自定义：" class="headerlink" title="1. 选择新建一个虚拟机，选择自定义："></a>1. 选择新建一个虚拟机，选择自定义：</h3><p><img src="/pic_home/media/d6eab94b251a2854bc10e81dc6e7161f.png" alt=""></p>
+<h3 id="2-选择Workstation-12-0："><a href="#2-选择Workstation-12-0：" class="headerlink" title="2. 选择Workstation 12.0："></a>2. 选择Workstation 12.0：</h3><p><img src="/pic_home/media/d0338866f03a41e5434ea7fd2fd5a803.png" alt=""></p>
+<h3 id="3-选择稍后安装操作系统："><a href="#3-选择稍后安装操作系统：" class="headerlink" title="3. 选择稍后安装操作系统："></a>3. 选择稍后安装操作系统：</h3><p><img src="/pic_home/media/b79eefbe731b49c89171b103baeb4247.png" alt=""></p>
+<h3 id="4-选择Linux，版本选择Red-Hat-Enterprise-Linux-7-64位："><a href="#4-选择Linux，版本选择Red-Hat-Enterprise-Linux-7-64位：" class="headerlink" title="4. 选择Linux，版本选择Red Hat Enterprise Linux 7 64位："></a>4. 选择Linux，版本选择Red Hat Enterprise Linux 7 64位：</h3><p><img src="/pic_home/media/04b8272ebeadb67bf8955285524237a5.png" alt=""></p>
+<h3 id="5-修改为自己目录："><a href="#5-修改为自己目录：" class="headerlink" title="5. 修改为自己目录："></a>5. 修改为自己目录：</h3><p><img src="/pic_home/media/95d53ea4c9623e1f1d7e0185fa446eee.png" alt=""></p>
+<h3 id="6-CPU默认为1个核心："><a href="#6-CPU默认为1个核心：" class="headerlink" title="6. CPU默认为1个核心："></a>6. CPU默认为1个核心：</h3><p><img src="/pic_home/media/14a1b0af868a96960b0025484454241a.png" alt=""></p>
+<h3 id="7-内存默认选择2048MB："><a href="#7-内存默认选择2048MB：" class="headerlink" title="7. 内存默认选择2048MB："></a>7. 内存默认选择2048MB：</h3><p><img src="/pic_home/media/cb49960bd6d62d1ad88eea4974ad9465.png" alt=""></p>
+<h3 id="8-网络选择为桥接，比较简单："><a href="#8-网络选择为桥接，比较简单：" class="headerlink" title="8. 网络选择为桥接，比较简单："></a>8. 网络选择为桥接，比较简单：</h3><p><img src="/pic_home/media/ea221e047226914c27ac1c34eca1ba69.png" alt=""></p>
+<h3 id="9-以下操作，默认即可："><a href="#9-以下操作，默认即可：" class="headerlink" title="9. 以下操作，默认即可："></a>9. 以下操作，默认即可：</h3><p><img src="/pic_home/media/0d5884351fb491222316099d7f8066fa.png" alt=""></p>
+<p><img src="/pic_home/media/2c2dd21d992855ffb9ed0c9270976e42.png" alt=""></p>
+<p><img src="/pic_home/media/fc03d4891aff400d8efea62c81b6ba89.png" alt=""></p>
+<h3 id="10-选择存储为单文件："><a href="#10-选择存储为单文件：" class="headerlink" title="10. 选择存储为单文件："></a>10. 选择存储为单文件：</h3><p><img src="/pic_home/media/d1fa0646d63a9309e986df7390cce347.png" alt=""></p>
+<p><img src="/pic_home/media/be73b278631f7c482d1c26106e7102d6.png" alt=""></p>
+<h3 id="18-进入“网络和主机名”，打开网卡，然后左下角修改主机名："><a href="#18-进入“网络和主机名”，打开网卡，然后左下角修改主机名：" class="headerlink" title="18.进入“网络和主机名”，打开网卡，然后左下角修改主机名："></a>18.进入“网络和主机名”，打开网卡，然后左下角修改主机名：</h3><p><img src="/pic_home/media/cc0d07425f3d7901bc94c1d5e69f4eb6.png" alt=""></p>
+<p><img src="/pic_home/media/3830a2e17a3181c6002080a246a748de.png" alt=""></p>
+<h3 id="11-选择编辑虚拟机设置，点击CD-DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机："><a href="#11-选择编辑虚拟机设置，点击CD-DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机：" class="headerlink" title="11. 选择编辑虚拟机设置，点击CD/DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机："></a>11. 选择编辑虚拟机设置，点击CD/DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机：</h3><p><img src="/pic_home/media/18c7f3404b6bef0231aaebb42e190294.png" alt=""></p>
+<h3 id="12-点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面："><a href="#12-点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面：" class="headerlink" title="12. 点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面："></a>12. 点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面：</h3><p><img src="/pic_home/media/5ca8e7aea1ddbe66b5601e2154428b08.png" alt=""></p>
+<h3 id="13-这里是在检查光盘"><a href="#13-这里是在检查光盘" class="headerlink" title="13. 这里是在检查光盘"></a>13. 这里是在检查光盘</h3><p><img src="/pic_home/media/d888d86bc4533860f64358f737179882.png" alt=""></p>
+<h3 id="14-这里选择在安装过程中的语言"><a href="#14-这里选择在安装过程中的语言" class="headerlink" title="14. 这里选择在安装过程中的语言"></a>14. 这里选择在安装过程中的语言</h3><p><img src="/pic_home/media/41199e414b6a00be0468734f0814d07e.png" alt=""></p>
+<h3 id="15-修改时间，选择为上海时区，然后点击完成："><a href="#15-修改时间，选择为上海时区，然后点击完成：" class="headerlink" title="15. 修改时间，选择为上海时区，然后点击完成："></a>15. 修改时间，选择为上海时区，然后点击完成：</h3><p><img src="/pic_home/media/fea02f847b478d5ef1e5ab7c3af4ebde.png" alt=""></p>
+<p><img src="/pic_home/media/e6b8f837ec2b2ea96adcf97248011a03.png" alt=""></p>
+<h3 id="16-进入软件选择："><a href="#16-进入软件选择：" class="headerlink" title="16. 进入软件选择："></a>16. 进入软件选择：</h3><p><img src="/pic_home/media/249e349a86fff0f6c441c375bc78137b.png" alt=""></p>
+<p><img src="/pic_home/media/d46c3e8a8448a4fa1a855629f48eaefe.png" alt=""></p>
+<h3 id="17-进入安装位置，选择我要配置分区，然后点击完成："><a href="#17-进入安装位置，选择我要配置分区，然后点击完成：" class="headerlink" title="17. 进入安装位置，选择我要配置分区，然后点击完成："></a>17. 进入安装位置，选择我要配置分区，然后点击完成：</h3><p><img src="/pic_home/media/df4f28dcc6de70a334d0ae5b0b17bdb4.png" alt=""></p>
+<h4 id="然后，选择“标准分区”"><a href="#然后，选择“标准分区”" class="headerlink" title="然后，选择“标准分区”"></a>然后，选择“标准分区”</h4><p><img src="/pic_home/media/b1c3d25227917132c3abe57ff5348b2d.png" alt=""></p>
+<h4 id="选择左下角的“-”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”："><a href="#选择左下角的“-”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”：" class="headerlink" title="选择左下角的“+”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”："></a>选择左下角的“+”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”：</h4><p><img src="/pic_home/media/0850f3140d59c2c78320ac9749caadde.png" alt=""></p>
+<h4 id="新添加一个，swap分区一般给定内存的1-5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”："><a href="#新添加一个，swap分区一般给定内存的1-5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”：" class="headerlink" title="新添加一个，swap分区一般给定内存的1.5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”："></a>新添加一个，swap分区一般给定内存的1.5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”：</h4><p><img src="/pic_home/media/5d7fc71689971b1e2681613beed4d445.png" alt=""></p>
+<p><img src="/pic_home/media/333607828b20b916dca5dca30637281a.png" alt=""></p>
+<h3 id="18-开始安装"><a href="#18-开始安装" class="headerlink" title="18. 开始安装"></a>18. 开始安装</h3><p><img src="/pic_home/media/c7d5bbec91f611d3fc88dd5e5956917a.png" alt=""></p>
+<h3 id="19-选择ROOT密码"><a href="#19-选择ROOT密码" class="headerlink" title="19. 选择ROOT密码"></a>19. 选择ROOT密码</h3><p><img src="/pic_home/media/a704ef740f3cfb567d2c486b3f224805.png" alt=""></p>
+<h3 id="20-安装完成，点击重启"><a href="#20-安装完成，点击重启" class="headerlink" title="20. 安装完成，点击重启"></a>20. 安装完成，点击重启</h3><p><img src="/pic_home/media/3e1603966ca7fa72b5aa6da7a170eaae.png" alt=""></p>
+<h3 id="21-重启后点击许可证信息"><a href="#21-重启后点击许可证信息" class="headerlink" title="21. 重启后点击许可证信息"></a>21. 重启后点击许可证信息</h3><p><img src="/pic_home/media/e8ae281b516d5096e2f9cdb9c0f47c83.png" alt=""></p>
+<h3 id="22-勾上我同意许可协议（A），然后点击完成，再点击完成配置"><a href="#22-勾上我同意许可协议（A），然后点击完成，再点击完成配置" class="headerlink" title="22. 勾上我同意许可协议（A），然后点击完成，再点击完成配置"></a>22. 勾上我同意许可协议（A），然后点击完成，再点击完成配置</h3><p><img src="/pic_home/media/f4d55589f175b848bf27f528fbf6865b.png" alt=""></p>
+<p><img src="/pic_home/media/e302a0b3d4f43ff86b50dd06c55f965e.png" alt=""></p>
+<h3 id="23-点击前进"><a href="#23-点击前进" class="headerlink" title="23. 点击前进"></a>23. 点击前进</h3><p><img src="/pic_home/media/08746d3d57bfd9942efdd0a96f169dd4.png" alt=""></p>
+<h3 id="24-选择不注册，完成"><a href="#24-选择不注册，完成" class="headerlink" title="24. 选择不注册，完成"></a>24. 选择不注册，完成</h3><p><img src="/pic_home/media/23476da02402d23889fd38580e48f06f.png" alt=""></p>
+<h2 id="四、运行RedHat"><a href="#四、运行RedHat" class="headerlink" title="四、运行RedHat"></a>四、运行RedHat</h2><h3 id="系统语言选择汉语"><a href="#系统语言选择汉语" class="headerlink" title="系统语言选择汉语"></a>系统语言选择汉语</h3><p><img src="/pic_home/media/a4fa2b7decafbbbc987ee45aa5ceb983.png" alt=""></p>
+<p><img src="/pic_home/media/2dfe0de3e6799fa2e512c1be1cc1bd70.png" alt=""></p>
+<h3 id="建立本地帐号"><a href="#建立本地帐号" class="headerlink" title="建立本地帐号"></a>建立本地帐号</h3><p><img src="/pic_home/media/cd1429601d346bdda5dd252fb93d83fd.png" alt=""></p>
+<h3 id="选择位置"><a href="#选择位置" class="headerlink" title="选择位置"></a>选择位置</h3><p><img src="/pic_home/media/1f31b93f2cd5f2d128b347cdc5c5a1e3.png" alt=""></p>
+<h3 id="配置完成"><a href="#配置完成" class="headerlink" title="配置完成"></a>配置完成</h3><p><img src="/pic_home/media/7b56891b5929ad7fb56cb00884c8ffb6.png" alt=""></p>
+<h3 id="RedHat在VMware上正常运行"><a href="#RedHat在VMware上正常运行" class="headerlink" title="RedHat在VMware上正常运行"></a>RedHat在VMware上正常运行</h3><p><img src="/pic_home/media/e50066353c7d932f51c4bb2bd834e315.png" alt=""></p>
+<p><img src="/pic_home/media/e573356cc7981944e72f964753137a33.png" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/09/27/windows7下搭建Linux虚拟机/">windows7下搭建Linux虚拟机</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Cfm 的个人博客">Cfm</a></p>
+  <p><span>发布时间:</span>2018年09月27日 - 23:09</p>
+  <p><span>最后更新:</span>2018年10月30日 - 16:10</p>
+  <p><span>原始链接:</span><a href="/2018/09/27/windows7下搭建Linux虚拟机/" title="windows7下搭建Linux虚拟机">http://daminga.cn/2018/09/27/windows7下搭建Linux虚拟机/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/09/27/windows7下搭建Linux虚拟机/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/虚拟机/" rel="tag"># 虚拟机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/20/select2的使用/" rel="next" title="select2的使用">
+                <i class="fa fa-chevron-left"></i> select2的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/tx.png"
+               alt="Cfm" />
+          <p class="site-author-name" itemprop="name">Cfm</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、准备工作"><span class="nav-number">1.</span> <span class="nav-text">一、准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#资源下载"><span class="nav-number">1.1.</span> <span class="nav-text">资源下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、VMware-12-安装过程"><span class="nav-number">2.</span> <span class="nav-text">二、VMware 12 安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载好虚拟机，然后运行，点击下一步"><span class="nav-number">2.1.</span> <span class="nav-text">1. 下载好虚拟机，然后运行，点击下一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-选择我接受，下一步"><span class="nav-number">2.2.</span> <span class="nav-text">2. 选择我接受，下一步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-选择安装的位置"><span class="nav-number">2.3.</span> <span class="nav-text">3. 选择安装的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-这一步，两个勾都不选也不会影响虚拟机的使用。"><span class="nav-number">2.4.</span> <span class="nav-text">4. 这一步，两个勾都不选也不会影响虚拟机的使用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式"><span class="nav-number">2.5.</span> <span class="nav-text">5. 这一步是问你是否要创建快捷方式，我都去掉勾，也就是不创建快捷方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-这一步，确认好了，就点击安装"><span class="nav-number">2.6.</span> <span class="nav-text">6. 这一步，确认好了，就点击安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-接下来就是等待的过程了"><span class="nav-number">2.7.</span> <span class="nav-text">7. 接下来就是等待的过程了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-这一步完成"><span class="nav-number">2.8.</span> <span class="nav-text">8.这一步完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-双击运行"><span class="nav-number">2.9.</span> <span class="nav-text">9. 双击运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-接着，输入密钥（密钥在百度找）"><span class="nav-number">2.10.</span> <span class="nav-text">10. 接着，输入密钥（密钥在百度找）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-接着就完成了，已经永久激活了"><span class="nav-number">2.11.</span> <span class="nav-text">11. 接着就完成了，已经永久激活了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、VMware-12安装Redhat-7-0"><span class="nav-number">3.</span> <span class="nav-text">三、VMware 12安装Redhat 7.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-选择新建一个虚拟机，选择自定义："><span class="nav-number">3.1.</span> <span class="nav-text">1. 选择新建一个虚拟机，选择自定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-选择Workstation-12-0："><span class="nav-number">3.2.</span> <span class="nav-text">2. 选择Workstation 12.0：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-选择稍后安装操作系统："><span class="nav-number">3.3.</span> <span class="nav-text">3. 选择稍后安装操作系统：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-选择Linux，版本选择Red-Hat-Enterprise-Linux-7-64位："><span class="nav-number">3.4.</span> <span class="nav-text">4. 选择Linux，版本选择Red Hat Enterprise Linux 7 64位：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-修改为自己目录："><span class="nav-number">3.5.</span> <span class="nav-text">5. 修改为自己目录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-CPU默认为1个核心："><span class="nav-number">3.6.</span> <span class="nav-text">6. CPU默认为1个核心：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-内存默认选择2048MB："><span class="nav-number">3.7.</span> <span class="nav-text">7. 内存默认选择2048MB：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-网络选择为桥接，比较简单："><span class="nav-number">3.8.</span> <span class="nav-text">8. 网络选择为桥接，比较简单：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-以下操作，默认即可："><span class="nav-number">3.9.</span> <span class="nav-text">9. 以下操作，默认即可：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-选择存储为单文件："><span class="nav-number">3.10.</span> <span class="nav-text">10. 选择存储为单文件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-进入“网络和主机名”，打开网卡，然后左下角修改主机名："><span class="nav-number">3.11.</span> <span class="nav-text">18.进入“网络和主机名”，打开网卡，然后左下角修改主机名：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-选择编辑虚拟机设置，点击CD-DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机："><span class="nav-number">3.12.</span> <span class="nav-text">11. 选择编辑虚拟机设置，点击CD/DVD（SATA），在右边的界面中选择镜像文件，然后点击开启此虚拟机：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面："><span class="nav-number">3.13.</span> <span class="nav-text">12. 点击开启虚拟机后，系统会启动，进入以下界面，可以等待60秒或直接回车进入安装界面：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-这里是在检查光盘"><span class="nav-number">3.14.</span> <span class="nav-text">13. 这里是在检查光盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-这里选择在安装过程中的语言"><span class="nav-number">3.15.</span> <span class="nav-text">14. 这里选择在安装过程中的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-修改时间，选择为上海时区，然后点击完成："><span class="nav-number">3.16.</span> <span class="nav-text">15. 修改时间，选择为上海时区，然后点击完成：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-进入软件选择："><span class="nav-number">3.17.</span> <span class="nav-text">16. 进入软件选择：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-进入安装位置，选择我要配置分区，然后点击完成："><span class="nav-number">3.18.</span> <span class="nav-text">17. 进入安装位置，选择我要配置分区，然后点击完成：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#然后，选择“标准分区”"><span class="nav-number">3.18.1.</span> <span class="nav-text">然后，选择“标准分区”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择左下角的“-”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”："><span class="nav-number">3.18.2.</span> <span class="nav-text">选择左下角的“+”号，跳出添加界面，填写为以下内容，并点击“添加挂载点”：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新添加一个，swap分区一般给定内存的1-5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”："><span class="nav-number">3.18.3.</span> <span class="nav-text">新添加一个，swap分区一般给定内存的1.5-2倍，我这里只给2GB，最后把所有空间给根分区，因为没有将所有剩余空间给根分区的选项，我写了一个20gb，然后系统非常智能的把所有剩余分区都给了根分区，添加后的结果为以下，然后选择“完成”：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-开始安装"><span class="nav-number">3.19.</span> <span class="nav-text">18. 开始安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-选择ROOT密码"><span class="nav-number">3.20.</span> <span class="nav-text">19. 选择ROOT密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-安装完成，点击重启"><span class="nav-number">3.21.</span> <span class="nav-text">20. 安装完成，点击重启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-重启后点击许可证信息"><span class="nav-number">3.22.</span> <span class="nav-text">21. 重启后点击许可证信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-勾上我同意许可协议（A），然后点击完成，再点击完成配置"><span class="nav-number">3.23.</span> <span class="nav-text">22. 勾上我同意许可协议（A），然后点击完成，再点击完成配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-点击前进"><span class="nav-number">3.24.</span> <span class="nav-text">23. 点击前进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-选择不注册，完成"><span class="nav-number">3.25.</span> <span class="nav-text">24. 选择不注册，完成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、运行RedHat"><span class="nav-number">4.</span> <span class="nav-text">四、运行RedHat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统语言选择汉语"><span class="nav-number">4.1.</span> <span class="nav-text">系统语言选择汉语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立本地帐号"><span class="nav-number">4.2.</span> <span class="nav-text">建立本地帐号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择位置"><span class="nav-number">4.3.</span> <span class="nav-text">选择位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置完成"><span class="nav-number">4.4.</span> <span class="nav-text">配置完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RedHat在VMware上正常运行"><span class="nav-number">4.5.</span> <span class="nav-text">RedHat在VMware上正常运行</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cfm</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Gemini
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytKB9HSJ';
+      var conf = '31334c20f8c45b58a761068bd82c339d';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right"},"mobile":{"show":false},"log":false});</script></body>
+</html>
+<!-- ҳ����С���� --> 
+<script type="text/javascript" src="/js/src/love.js"></script>
