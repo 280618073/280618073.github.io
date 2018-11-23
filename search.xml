@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Mysql and、or的优先级</title>
+      <link href="/2018/10/17/Mysql-and%E3%80%81or%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7/"/>
+      <url>/2018/10/17/Mysql-and%E3%80%81or%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7/</url>
+      <content type="html"><![CDATA[<p>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from table where  条件1 OR 条件2 AND 条件3</span><br></pre></td></tr></table></figure></p><p>此时的执行顺序是条件1 OR (条件2 AND 条件3)<br>也就是说，在没有小括号()的干预下，总是先执行AND语句，再执行OR语句。</p><p>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from table where  条件1 AND  条件2 OR 条件3 AND 条件4</span><br><span class="line">等价于</span><br><span class="line">select * from table where   (  条件1 AND  条件2  )  OR   (  条件3 AND 条件4  )</span><br></pre></td></tr></table></figure></p><p>参考链接：<a href="https://blog.csdn.net/u011064736/article/details/70257366" title="MySQL 语句中执行优先级——and比or高" target="_blank" rel="noopener">https://blog.csdn.net/u011064736/article/details/70257366</a></p>]]></content>
+      
+      <categories>
+          
+          <category> Mysql随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Mysql FIND_IN_SET()</title>
       <link href="/2018/10/08/Mysql-FIND-IN-SET/"/>
       <url>/2018/10/08/Mysql-FIND-IN-SET/</url>
@@ -319,11 +340,11 @@
       
         <tags>
             
+            <tag> mybatis </tag>
+            
             <tag> ajax </tag>
             
             <tag> springMvc </tag>
-            
-            <tag> mybatis </tag>
             
         </tags>
       
