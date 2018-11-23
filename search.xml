@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Mysql FIND_IN_SET()</title>
+      <link href="/2018/10/08/Mysql-FIND-IN-SET/"/>
+      <url>/2018/10/08/Mysql-FIND-IN-SET/</url>
+      <content type="html"><![CDATA[<h2 id="FIND-IN-SET应用情景"><a href="#FIND-IN-SET应用情景" class="headerlink" title="FIND_IN_SET应用情景"></a>FIND_IN_SET应用情景</h2><p>如：<br>在商品表中，有个城市字段存储哪几个城市有货，如广州、汕头、珠海，存储的值是200,754,756<br>如果要查询汕头有货的商品，不能用like，需要用到FIND_IN_SET()</p><h2 id="FIND-IN-SET-语法"><a href="#FIND-IN-SET-语法" class="headerlink" title="FIND_IN_SET()语法"></a>FIND_IN_SET()语法</h2><p><strong>FIND_IN_SET(str,strlist)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT FIND_IN_SET(&apos;b&apos;,&apos;a,b,c,d&apos;);</span><br><span class="line">-&gt; 2 </span><br><span class="line">mysql&gt; SELECT *  from video  where find_in_set(&apos;4&apos;,week);</span><br></pre></td></tr></table></figure></p><p>like是广泛的模糊匹配，字符串中没有分隔符，find_in_set是精确匹配，字段值以英文”,”分隔</p>]]></content>
+      
+      <categories>
+          
+          <category> Mysql随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>windows7下搭建Linux虚拟机</title>
       <link href="/2018/09/27/windows7%E4%B8%8B%E6%90%AD%E5%BB%BALinux%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
       <url>/2018/09/27/windows7%E4%B8%8B%E6%90%AD%E5%BB%BALinux%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
@@ -210,9 +231,9 @@
       
         <tags>
             
-            <tag> oracle </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> oracle </tag>
             
         </tags>
       
@@ -233,9 +254,9 @@
       
         <tags>
             
-            <tag> oracle </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> oracle </tag>
             
         </tags>
       
@@ -298,11 +319,11 @@
       
         <tags>
             
-            <tag> mybatis </tag>
-            
             <tag> ajax </tag>
             
             <tag> springMvc </tag>
+            
+            <tag> mybatis </tag>
             
         </tags>
       
