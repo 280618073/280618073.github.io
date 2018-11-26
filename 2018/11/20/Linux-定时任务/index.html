@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start停止crontab服务：service crond stop重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本   12">
+<meta name="description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start 停止crontab服务：service crond stop 重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 定时任务">
 <meta property="og:url" content="http://daminga.cn/2018/11/20/Linux-定时任务/index.html">
 <meta property="og:site_name" content="Cfm&#39;s blog">
-<meta property="og:description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start停止crontab服务：service crond stop重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本   12">
+<meta property="og:description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start 停止crontab服务：service crond stop 重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-26T08:59:11.507Z">
+<meta property="og:updated_time" content="2018-11-26T09:06:30.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 定时任务">
-<meta name="twitter:description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start停止crontab服务：service crond stop重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本   12">
+<meta name="twitter:description" content="使用crontab可以在指定的时间执行一个shell脚本或者一系列Linux命令。  步骤：  开启crontab  开启crontab服务：service crond start 停止crontab服务：service crond stop 重启crontab服务：service crond restart  进入/etc/cron.d目录  在/etc/cron.d目录里面创建两个文本">
 
 
 
@@ -388,10 +388,9 @@
 </blockquote>
 <p>步骤：</p>
 <ol>
-<li>开启crontab</li>
-</ol>
-<p>开启crontab服务：service crond start<br>停止crontab服务：service crond stop<br>重启crontab服务：service crond restart</p>
-<ol start="2">
+<li><p>开启crontab</p>
+<p> 开启crontab服务：service crond start<br> 停止crontab服务：service crond stop<br> 重启crontab服务：service crond restart</p>
+</li>
 <li><p>进入/etc/cron.d目录</p>
 </li>
 <li><p>在/etc/cron.d目录里面创建两个文本</p>
@@ -402,10 +401,10 @@
 <li>编辑crontab文件</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost cron.d]<span class="comment"># vi display_process.cron</span></span><br></pre></td></tr></table></figure>
-<p>按i添加文件内容，最后按ESC，输入:wq退出文本编辑。</p>
-<p><em>/30 </em> <em> </em> * sh /home/tmp/monitor.sh</p>
-<p>意思是每半小时执行一次monitor.sh这个脚本，cron表达式可以百度。</p>
-<ol start="5">
+<pre><code>按i添加文件内容，最后按ESC，输入:wq退出文本编辑。
+*/30 * * * * sh /home/tmp/monitor.sh
+意思是每半小时执行一次monitor.sh这个脚本，cron表达式可以百度。
+</code></pre><ol start="5">
 <li>执行crontab命令添加定时任务</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab display_process.cron</span><br></pre></td></tr></table></figure>
@@ -431,7 +430,7 @@
   <p><span>本文标题:</span><a href="/2018/11/20/Linux-定时任务/">Linux 定时任务</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Cfm 的个人博客">Cfm</a></p>
   <p><span>发布时间:</span>2018年11月20日 - 22:11</p>
-  <p><span>最后更新:</span>2018年11月26日 - 16:11</p>
+  <p><span>最后更新:</span>2018年11月26日 - 17:11</p>
   <p><span>原始链接:</span><a href="/2018/11/20/Linux-定时任务/" title="Linux 定时任务">http://daminga.cn/2018/11/20/Linux-定时任务/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/11/20/Linux-定时任务/"  aria-label="复制成功！"></i></span>
   </p>
