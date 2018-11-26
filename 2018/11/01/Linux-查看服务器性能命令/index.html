@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="springBoot," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -94,18 +94,21 @@
 
 
 
-<meta name="description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
-<meta name="keywords" content="springBoot">
+<meta name="description" content="toptop 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：s – 改变画面更新频率l – 关闭或开启第一部分第一行 top 信息的表示t – 关闭或开启第一部分第二行 Tasks 和第三行 Cpus 信息的表示m – 关闭或开启第一部分第四行 Mem 和 第五行 Swap 信息的表示N – 以 PID 的大小的顺序排列表示进程列表P – 以 CPU 占用率大小的顺序排">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot学习历程：异常处理">
-<meta property="og:url" content="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/index.html">
+<meta property="og:title" content="Linux 查看服务器性能命令">
+<meta property="og:url" content="http://daminga.cn/2018/11/01/Linux-查看服务器性能命令/index.html">
 <meta property="og:site_name" content="Cfm&#39;s blog">
-<meta property="og:description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
+<meta property="og:description" content="toptop 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：s – 改变画面更新频率l – 关闭或开启第一部分第一行 top 信息的表示t – 关闭或开启第一部分第二行 Tasks 和第三行 Cpus 信息的表示m – 关闭或开启第一部分第四行 Mem 和 第五行 Swap 信息的表示N – 以 PID 的大小的顺序排列表示进程列表P – 以 CPU 占用率大小的顺序排">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T07:45:54.486Z">
+<meta property="og:image" content="http://daminga.cn/pic_home/top.jpg">
+<meta property="og:image" content="http://daminga.cn/pic_home/df.jpg">
+<meta property="og:updated_time" content="2018-11-26T07:56:06.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot学习历程：异常处理">
-<meta name="twitter:description" content="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController1234567891011121314151617@Controller@RequestMapping(value = &quot;error&quot;)public class BaseErrorController implements ErrorController &amp;#123;private static">
+<meta name="twitter:title" content="Linux 查看服务器性能命令">
+<meta name="twitter:description" content="toptop 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：s – 改变画面更新频率l – 关闭或开启第一部分第一行 top 信息的表示t – 关闭或开启第一部分第二行 Tasks 和第三行 Cpus 信息的表示m – 关闭或开启第一部分第四行 Mem 和 第五行 Swap 信息的表示N – 以 PID 的大小的顺序排列表示进程列表P – 以 CPU 占用率大小的顺序排">
+<meta name="twitter:image" content="http://daminga.cn/pic_home/top.jpg">
 
 
 
@@ -134,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/"/>
+  <link rel="canonical" href="http://daminga.cn/2018/11/01/Linux-查看服务器性能命令/"/>
 
 
 
 
 
-  <title>SpringBoot学习历程：异常处理 | Cfm's blog</title>
+  <title>Linux 查看服务器性能命令 | Cfm's blog</title>
   
 
 
@@ -283,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/">
+    <link itemprop="mainEntityOfPage" href="http://daminga.cn/2018/11/01/Linux-查看服务器性能命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cfm">
@@ -300,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SpringBoot学习历程：异常处理</h1>
+          <h1 class="post-title" itemprop="name headline">Linux 查看服务器性能命令</h1>
         
 
         <div class="post-meta">
@@ -312,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T15:03:36+08:00">
-                2018-09-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T15:11:39+08:00">
+                2018-11-01
               </time>
             
 
@@ -335,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot-学习历程/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot 学习历程</span>
+                  <a href="/categories/Linux随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux随笔</span>
                   </a>
                 </span>
 
@@ -354,8 +357,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/09/03/SpringBoot学习历程：异常处理/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/09/03/SpringBoot学习历程：异常处理/" itemprop="commentsCount"></span>
+                <a href="/2018/11/01/Linux-查看服务器性能命令/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/11/01/Linux-查看服务器性能命令/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -383,14 +386,25 @@
       
 
       
-        <h2 id="方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController"><a href="#方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController" class="headerlink" title="方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController"></a>方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"error"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseErrorController</span> <span class="keyword">implements</span> <span class="title">ErrorController</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(BaseErrorController.class);</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getErrorPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"出错啦！进入自定义错误控制器"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"error/error"</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">error</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> getErrorPath();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="方法二：添加自定义的错误页面"><a href="#方法二：添加自定义的错误页面" class="headerlink" title="方法二：添加自定义的错误页面"></a>方法二：添加自定义的错误页面</h2><ul>
-<li><p>html静态页面：在resources/public/error/ 下定义<br>如添加404页面： resources/public/error/404.html页面，中文注意页面编码</p>
-</li>
-<li><p>模板引擎页面：在templates/error/下定义<br>如添加5xx页面： templates/error/5xx.ftl<br>注：templates/error/ 这个的优先级比较 resources/public/error/高</p>
-</li>
+        <h2 id="top"><a href="#top" class="headerlink" title="top"></a>top</h2><h3 id="top-运行中可以通过-top-的内部命令对进程的显示方式进行控制。内部命令如下："><a href="#top-运行中可以通过-top-的内部命令对进程的显示方式进行控制。内部命令如下：" class="headerlink" title="top 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下："></a>top 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：</h3><p>s – 改变画面更新频率<br>l – 关闭或开启第一部分第一行 top 信息的表示<br>t – 关闭或开启第一部分第二行 Tasks 和第三行 Cpus 信息的表示<br>m – 关闭或开启第一部分第四行 Mem 和 第五行 Swap 信息的表示<br>N – 以 PID 的大小的顺序排列表示进程列表<br>P – 以 CPU 占用率大小的顺序排列进程列表<br>M – 以内存占用率大小的顺序排列进程列表<br>h – 显示帮助<br>n – 设置在进程列表所显示进程的数量<br>q – 退出 top<br>s – 改变画面更新周期</p>
+<p><img src="/pic_home/top.jpg" alt="avatar"></p>
+<h3 id="各进程（任务）的状态监控"><a href="#各进程（任务）的状态监控" class="headerlink" title="各进程（任务）的状态监控"></a>各进程（任务）的状态监控</h3><font color="#DC143C"> PID：进程ID，进程的唯一标识符<br><br>USER：进程所有者的实际用户名。<br><br>PR：进程的调度优先级。这个字段的一些值是’rt’。这意味这这些进程运行在实时态。<br><br>NI：进程的nice值（优先级）。越小的值意味着越高的优先级。负值表示高优先级，正值表示低优先级<br><br>VIRT：进程使用的虚拟内存。进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES<br><br>RES：驻留内存大小。驻留内存是任务使用的非交换物理内存大小。进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA<br><br>SHR：SHR是进程使用的共享内存。共享内存大小，单位kb<br><br>S：这个是进程的状态。它有以下不同的值:<br></font><br>D - 不可中断的睡眠态。<br>R – 运行态<br>S – 睡眠态<br>T – 被跟踪或已停止<br>Z – 僵尸态<br><font color="#DC143C"><br>%CPU：自从上一次更新时到现在任务所使用的CPU时间百分比。<br><br>%MEM：进程使用的可用物理内存百分比。<br><br>TIME+：任务启动后到现在所使用的全部CPU时间，精确到百分之一秒。<br><br>COMMAND：运行进程所使用的命令。进程名称（命令名/命令行）<br></font>
+
+<h2 id="uptime"><a href="#uptime" class="headerlink" title="uptime"></a>uptime</h2><h3 id="uptime命令查看linux系统负载"><a href="#uptime命令查看linux系统负载" class="headerlink" title="uptime命令查看linux系统负载"></a>uptime命令查看linux系统负载</h3><p>系统中的uptime命令主要用于获取主机运行时间和查询linux系统负载等信息。uptime命令可以显示系统已经运行了多长时间，信息显示依次为：<font color="#DC143C">现在时间、系统已经运行了多长时间、目前有多少登陆用户、系统在过去的1分钟、5分钟和15分钟内的平均负载。</font></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[linux @ localhost]$ uptime</span><br></pre></td></tr></table></figure>
+<h3 id="显示结果为："><a href="#显示结果为：" class="headerlink" title="显示结果为："></a>显示结果为：</h3><p>10:19:04 up 257 days, 18:56,  12 users,  load average: 2.10, 2.10,2.09</p>
+<h3 id="系统负载："><a href="#系统负载：" class="headerlink" title="系统负载："></a>系统负载：</h3><p>系统平均负载被定义为在特定时间间隔内运行队列中的平均进程数。如果一个进程满足以下条件则其就会位于运行队列中：</p>
+<ul>
+<li>它没有在等待I/O操作的结果</li>
+<li>它没有主动进入等待状态(也就是没有调用’wait’)</li>
+<li>没有被停止(例如：等待终止)</li>
 </ul>
-<h2 id="方法三：使用注解-ControllerAdvice"><a href="#方法三：使用注解-ControllerAdvice" class="headerlink" title="方法三：使用注解@ControllerAdvice"></a>方法三：使用注解@ControllerAdvice</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.cfm.handler;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.HttpStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ControllerAdvice;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.ModelAndView;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 异常处理类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorExceptionHandler</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 统一异常处理</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> exception</span></span><br><span class="line"><span class="comment">	 *            exception</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ExceptionHandler</span>(&#123; RuntimeException.class &#125;)</span><br><span class="line">	<span class="meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ModelAndView <span class="title">processException</span><span class="params">(RuntimeException exception)</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"自定义异常处理-RuntimeException"</span>);</span><br><span class="line">		ModelAndView m = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">		m.addObject(<span class="string">"Exception"</span>, exception.getMessage());</span><br><span class="line">		m.setViewName(<span class="string">"error/500"</span>);</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 统一异常处理</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> exception</span></span><br><span class="line"><span class="comment">	 *            exception</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@ExceptionHandler</span>(&#123; Exception.class &#125;)</span><br><span class="line">	<span class="meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ModelAndView <span class="title">processException</span><span class="params">(Exception exception)</span> </span>&#123;</span><br><span class="line">		logger.info(<span class="string">"自定义异常处理-Exception"</span>);</span><br><span class="line">		ModelAndView m = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">		m.addObject(<span class="string">"Exception"</span>, exception.getMessage());</span><br><span class="line">		m.setViewName(<span class="string">"error/500"</span>);</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>一般来说，每个CPU内核当前活动进程数不大于3，则系统运行表现良好！当然这里说的是每个cpu内核，也就是如果你的主机是四核cpu的话，那么只要uptime最后输出的一串字符数值小于12即表示系统负载不是很严重.当然如果达到20，那就表示当前系统负载非常严重，估计打开执行web脚本非常缓慢.</p>
+<h2 id="df-lh"><a href="#df-lh" class="headerlink" title="df -lh"></a>df -lh</h2><p>查看磁盘占用情况</p>
+<p><img src="/pic_home/df.jpg" alt="avatar"></p>
+<p>Used：已经使用的空间<br>Avail：可以使用的空间<br>Mounted on：挂载的目录</p>
+<p>参考资料：<a href="https://www.cnblogs.com/zhoug2020/p/6336453.html" title="Linux top命令的用法详细详解" target="_blank" rel="noopener">https://www.cnblogs.com/zhoug2020/p/6336453.html</a><br><a href="https://www.cnblogs.com/kaituorensheng/p/3602812.html" title="linux中uptime命令查看linux系统负载" target="_blank" rel="noopener">https://www.cnblogs.com/kaituorensheng/p/3602812.html</a></p>
+
       
     </div>
     
@@ -406,12 +420,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/09/03/SpringBoot学习历程：异常处理/">SpringBoot学习历程：异常处理</a></p>
+  <p><span>本文标题:</span><a href="/2018/11/01/Linux-查看服务器性能命令/">Linux 查看服务器性能命令</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Cfm 的个人博客">Cfm</a></p>
-  <p><span>发布时间:</span>2018年09月03日 - 15:09</p>
-  <p><span>最后更新:</span>2018年09月03日 - 15:09</p>
-  <p><span>原始链接:</span><a href="/2018/09/03/SpringBoot学习历程：异常处理/" title="SpringBoot学习历程：异常处理">http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/09/03/SpringBoot学习历程：异常处理/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年11月01日 - 15:11</p>
+  <p><span>最后更新:</span>2018年11月26日 - 15:11</p>
+  <p><span>原始链接:</span><a href="/2018/11/01/Linux-查看服务器性能命令/" title="Linux 查看服务器性能命令">http://daminga.cn/2018/11/01/Linux-查看服务器性能命令/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://daminga.cn/2018/11/01/Linux-查看服务器性能命令/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -441,7 +455,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/springBoot/" rel="tag"># springBoot</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
         </div>
       
@@ -454,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/31/SpringBoot学习历程：日志配置-logback和log4j2/" rel="next" title="SpringBoot学习历程：日志配置-logback和log4j2">
-                <i class="fa fa-chevron-left"></i> SpringBoot学习历程：日志配置-logback和log4j2
+              <a href="/2018/10/17/Mysql-and、or的优先级/" rel="next" title="Mysql and、or的优先级">
+                <i class="fa fa-chevron-left"></i> Mysql and、or的优先级
               </a>
             
           </div>
@@ -463,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/03/SpringBoot学习历程：Servlets-Filters-listeners注解/" rel="prev" title="SpringBoot学习历程：Servlets, Filters, listeners注解">
-                SpringBoot学习历程：Servlets, Filters, listeners注解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：Spring-Boot-将所有的错误默认映射到-error，-实现ErrorController"><span class="nav-number">1.</span> <span class="nav-text">方法一：Spring Boot 将所有的错误默认映射到/error， 实现ErrorController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：添加自定义的错误页面"><span class="nav-number">2.</span> <span class="nav-text">方法二：添加自定义的错误页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三：使用注解-ControllerAdvice"><span class="nav-number">3.</span> <span class="nav-text">方法三：使用注解@ControllerAdvice</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#top"><span class="nav-number">1.</span> <span class="nav-text">top</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#top-运行中可以通过-top-的内部命令对进程的显示方式进行控制。内部命令如下："><span class="nav-number">1.1.</span> <span class="nav-text">top 运行中可以通过 top 的内部命令对进程的显示方式进行控制。内部命令如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各进程（任务）的状态监控"><span class="nav-number">1.2.</span> <span class="nav-text">各进程（任务）的状态监控</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uptime"><span class="nav-number">2.</span> <span class="nav-text">uptime</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#uptime命令查看linux系统负载"><span class="nav-number">2.1.</span> <span class="nav-text">uptime命令查看linux系统负载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示结果为："><span class="nav-number">2.2.</span> <span class="nav-text">显示结果为：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统负载："><span class="nav-number">2.3.</span> <span class="nav-text">系统负载：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#df-lh"><span class="nav-number">3.</span> <span class="nav-text">df -lh</span></a></li></ol></div>
             
 
           </div>
